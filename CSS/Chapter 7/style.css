@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+header ul{
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+}
+header ul li{
+    margin: 0 20px;
+    list-style: none;
+}
+header ul img{
+    height: 30px;
+    margin: 0 10px;
+}
+.main-container{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    column-gap: 20vw;
+    height: 80vh;
+}
+.container1{
+    color: white;
+    background-color: red;
+}
+.container2{
+    color: white;
+    background-color: blue;
+}
+.footer{
+    background-color: rgb(40, 39, 39);
+    color: white;
+    /* height: 47px; */
+    padding: 20px;
+    text-align: center;
+}

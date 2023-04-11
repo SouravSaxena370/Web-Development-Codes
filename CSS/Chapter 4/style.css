@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color: black;
+    color: white;
+    /* height: 70px; */
+    padding: 10px;
+}
+.navbar li a{
+    color: white;
+    text-decoration: none;
+}
+.navbar li {
+    display: inline;
+    padding: 10px;
+}
+.left
+{
+    width: 50%;
+    height: 90vh;
+    background-color: red;
+    display: inline-block;
+    /* visibility: hidden; */
+
+}
+.right
+{
+    width: 50%;
+    height: 90vh;
+    background-color: green;
+    display: inline-block;
+
+}
+footer{
+    font-family: 'Baloo Bhaina 2', cursive;
+    text-align: center;
+    color: white;
+    background-color: black;
+    height: 40px;
+    padding-top: 10px;
+    opacity: 0.8;
+    text-transform: uppercase;
+}

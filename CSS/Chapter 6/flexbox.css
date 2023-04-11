@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+    display: inline;
+    padding: 10px;
+}
+header{
+    color: white;
+    background-color: black;
+    padding :15px;   
+}
+nav{
+    display: flex;
+}
+img{
+    display: inline;
+    background-color: black;
+    height: 20px;
+    margin: 0 12px;
+}
+.container{
+    display: flex;
+    justify-content:space-between;
+}
+.box1{
+    width: 40vw;
+    height: 80vh;
+    background-color: red;
+    /* float: left; */
+    color: white;
+}
+.box2{
+    width: 40vw;
+    height: 80vh;
+    background-color: green;
+    /* float:right; */
+    color: white;
+}
+footer{
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 10vh;
+    /* clear: both; */
+    padding-top: 12px;
+    text-align: center;
+    
+}

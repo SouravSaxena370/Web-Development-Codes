@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 9vh;
+    background-color: black;
+}
+.container{
+    height: 90vh;
+    background-color: blue;
+}
+.slider{
+    background-color: white;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+img{
+    width: 85vw;
+}
+.img1{
+    transform: translatex(-7vw);
+    animation: slider2 2s ease-in 2s infinite;
+    
+}
+.img2{
+    transform: translatex(0vw);
+    animation: slider1 2s ease-in 2s infinite;
+}
+.img3{
+    transform: translatex(7vw);
+
+}
+
+@keyframes slider1 {
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(93vw);
+    }
+}
+@keyframes slider2 {
+    0%{
+        transform: translate(-7vw);
+    }
+    100%{
+        transform: translate(86vw);
+    }
+}

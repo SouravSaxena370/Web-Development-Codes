@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: black;
+    color:white;
+    height: 60px;
+    border: 3px solid white;
+    padding: 4px;
+    margin: 5px;
+}
+.content{
+    background-color: blue;
+    height: 87vh;
+    border:3px solid orange;
+    padding: 4px;
+    margin: 13px;
+    box-sizing: content-box;
+}
+footer{
+    background-color: brown;
+    height: 23px;
+    border: 3px solid violet;
+    padding: 4px;
+    color: whitesmoke;
+}
+.center{
+    text-align: center;
+}

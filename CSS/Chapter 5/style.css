@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+} 
+.navbar{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    /* z-index:-1; */
+}
+li{
+    list-style:square;
+}
+.navbar li
+{
+    display: inline-block;
+    padding: 10px; 
+    font-size: 3vw;
+}
+.container{
+    background-color: red;
+    height: 500vh;
+} 
