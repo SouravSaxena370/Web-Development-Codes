@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{    
+    font-family: sans-serif;
+}
+.navbar{
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    align-items: center;
+    font-family: "Roboto",sans-serif;
+
+}
+.brand-icon{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 35px 4px 15px;
+}
+.navbar-items{
+    display: flex;
+    margin: 0 5rem 0 0;
+}
+.navbar-items li{
+    padding: 1rem;
+    font-size: 1.2rem;
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+.search-item{
+    height: 2rem;
+    width: 20%;
+    padding: 0 8px ;
+    border-radius: 5px;
+    font-family: "Roboto",sans-serif;
+}
+.search-button{
+    margin: 0 0 0 8px;
+    padding: 8px ;
+    height: 2.2rem;
+    font-family: "Roboto",sans-serif;
+}
+.search-button:hover{
+    color: whitesmoke;
+    background-color: rgb(76, 73, 73);
+    border-radius: 5px;
+}
+.container1{
+
+    width: 60%;
+    margin: 2rem auto;
+}
+.container1 label{
+    display: block;
+    font-size: 2rem;
+}
+.container1 input{
+    width: 100%;
+    margin: 8px 0 20px 0;
+    padding: 3px 8px;
+    height: 1.8rem;
+    border-radius: 2px;
+    border: 0.5px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container1 textarea{
+    margin: 8px 0 20px 0;
+    padding: 3px 8px;
+    width: 100%;
+    border-radius: 2px;
+    border: 0.5px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.Add-note{
+    padding: 6px ;
+    height: 2.2rem;
+    font-size: 1.2rem;
+    font-family: "Roboto",sans-serif;
+}
+.Add-note:hover{
+    color: whitesmoke;
+    background-color: rgb(76, 73, 73);
+    border-radius: 5px;
+}
+
+.bold{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+hr{
+    width: 70%;
+    margin: auto;
+    border: none;
+    border-top: 1px solid;
+}
+
+.notes-container{
+    width: 70%;
+    margin: auto;
+}
+.notes-container-heading{
+    margin: auto;
+    text-align: center;
+    margin: 10px;
+    font-size: 1.5rem;
+}
+.footer{
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 100px;
+}
+.Remove{
+    padding: 4px ;
+    font-family: "Roboto",sans-serif;
+    margin: 4px 0 15px 0;
+}
+.Remove:hover{
+    color: whitesmoke;
+    background-color: rgb(76, 73, 73);
+    border-radius: 5px;
+}

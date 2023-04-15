@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a class="brand-icon" href="#">Notezy</a>
+        <ul class="navbar-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <input class="search-item" type="text" Placeholder="Search">
+        <button class="search-button" type="submit">Search</button>
+    </div>
+
+    <div class="container1">
+        <div class="title">
+            <label  for="Title">Title:</label>
+            <input id="tit" type="text" placeholder="Title here">
+        </div>
+        <div class="discrip">
+            <label  for="Title">Description:</label>
+            <textarea id="desc" name="" id="" cols="30" rows="10" placeholder="Describe"></textarea>
+        </div>
+        <button class="Add-note" type="submit" >Add Note</button>
+    </div>
+    <hr> 
+    <h3 class="notes-container-heading">Your Notes:</h3>
+    <div class="notes-container">
+    </div>
+    <div class="footer">
+        Copyright &copy; Notezy
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
