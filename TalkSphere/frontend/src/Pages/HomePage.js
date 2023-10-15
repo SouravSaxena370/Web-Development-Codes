@@ -17,7 +17,7 @@ const HomePage = () => {
         w="100%"
         m="40px 0 15px 0"
         borderRadius="lg"
-        boarderWidth="1px"
+        borderWidth="1px"
         >
             <Text fontSize="4xl" fontFamily={"Work sans"} color="black">TalkSphere</Text>
         </Box>
@@ -29,7 +29,7 @@ const HomePage = () => {
         w="100%"
         m="40px 0 15px 0"
         borderRadius="lg"
-        boarderWidth="1px">
+        borderWidth="1px">
             <Tabs variant='soft-rounded' >
   <TabList mb="1em">
     <Tab width="50%">Login</Tab>
