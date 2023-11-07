@@ -6,7 +6,7 @@ const UserListItem = ({user,handleFunction}) => {
 //   const { user } = ChatState();
   return (
     <Box
-      onClick={{ handleFunction }}
+      onClick={ handleFunction }
       cursor={"pointer"}
       bg="#E8E8E8"
       _hover={{

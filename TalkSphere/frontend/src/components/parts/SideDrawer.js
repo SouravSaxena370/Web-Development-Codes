@@ -16,7 +16,9 @@ import {
   DrawerBody,
   Input,
   useToast,
+  // Spinner,
 } from "@chakra-ui/react";
+import { Spinner } from "@chakra-ui/spinner"
 import { BellIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import React, { useState } from "react";
 import { ChatState } from "../../Context/ChatProvider";
@@ -33,7 +35,7 @@ const SideDrawer = () => {
   const [searchResult, setSearchResult] = useState([]);
   const [loading, setLoading] = useState(false);
   const [loadingChat, setLoadingChat] = useState();
-  const { user } = ChatState();
+  const { user,setSelectedChat,chats,setChats } = ChatState();
   const navigate = useNavigate();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -53,7 +55,8 @@ const SideDrawer = () => {
         isCloseable: true,
         position: "top-left",
       });
-    } else {
+    } 
+    else {
       try {
         setLoading(true);
         const config = {
@@ -64,10 +67,7 @@ const SideDrawer = () => {
         const { data } = await axios.get(`/api/user?search=${search}`, config);
         setLoading(false);
         setSearchResult(data);
-        // console.log(search,data)
-        // console.log("data get: ", data);
       } catch (error) {
-        // console.log(error)
         toast({
           title: "Error Occured",
           description: "Failed to Load the search results",
@@ -78,12 +78,36 @@ const SideDrawer = () => {
         });
       }
     }
-  };
-
-  const testfunction=()=>{
-    console.log("test function")
   }
-  const accessChat = (userId) => {};
+
+  const accessChat = async(userId) => {
+    try{
+      setLoading(true)
+
+      const config={
+        headers:{
+          "Content-type":"application/json",
+          Authorization: `Bearer ${user.token}`
+        }
+      }
+      const {data} = await axios.post('/api/chat',{userId},config)
+      console.log(chats,data)
+      if(!chats.find((c)=> c._id === data._id)) setChats([data, ...chats])
+
+      setSelectedChat(data)
+      setLoadingChat(false)
+      onClose()
+    }catch(error){
+      toast({
+        title: "Error fetching the chat",
+        description: error.message,
+        status: "error",
+        duration: 5000,
+        isCloseable: true,
+        position: "bottom-left",
+      });
+    }
+  };
 
   return (
     <>
@@ -128,7 +152,7 @@ const SideDrawer = () => {
                 <MenuItem>My Profile</MenuItem>
               </ProfileModal>
               <MenuDivider />
-              <MenuItem onClick={logoutHandler}>Logout</MenuItem>
+              <MenuItem onClick={logoutHandler} color={'red'}>Logout</MenuItem>
             </MenuList>
           </Menu>
         </div>
@@ -159,10 +183,11 @@ const SideDrawer = () => {
                 />
               ))
             )}
+            {loadingChat && <Spinner ml="auto" d={"flex"}/>}
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-    </>
+    </> 
   );
 };
 
